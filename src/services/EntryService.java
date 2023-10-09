@@ -1,4 +1,6 @@
 package services;
 
-public class EntryService {
+public interface EntryService{
+
+
 }

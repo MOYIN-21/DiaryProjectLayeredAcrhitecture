@@ -1,4 +1,4 @@
 package services;
 
-public class EntryServiceImpl {
+public class EntryServiceImpl implements EntryService {
 }
