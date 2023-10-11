@@ -1,33 +1,21 @@
-package models;
-
+package data.model;
 
 import java.time.LocalDateTime;
 
 public class Entry {
-    private String owner;
+
+    private int id;
     private String title;
     private String body;
-    private LocalDateTime dateCreated;
-    private int id;
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
+    private LocalDateTime createdDate = LocalDateTime.now();
+    private String OwnerName;
 
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
-        this.id = Integer.parseInt(String.valueOf(id));
-    }
-
-    public int getEntryId() {
-        return id;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -46,22 +34,30 @@ public class Entry {
         this.body = body;
     }
 
-    public LocalDateTime getDateCreated() {
-        return dateCreated;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
-    public void setDateCreated(LocalDateTime dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getOwnerName() {
+        return OwnerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        OwnerName = ownerName;
     }
 
     @Override
     public String toString() {
         return "Entry{" +
-                "userName='" + owner + '\'' +
+                "id=" + id +
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
-                ", dateCreated=" + dateCreated +
-                ", id=" + id +
+                ", createdDate=" + createdDate +
+                ", OwnerName='" + OwnerName + '\'' +
                 '}';
     }
 }
